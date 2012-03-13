@@ -1,0 +1,8 @@
+host=192.168.0.1
+
+name=Blame Attack 3
+type=tcp_stream
+src_port=5551
+dst_port=any
+ip=any
+recv="\x90{10}.*\xcd\x80"

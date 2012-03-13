@@ -1,0 +1,9 @@
+host=192.168.0.1
+
+name=Blame Attack 1
+type=protocol
+proto=tcp
+src_port=5551
+dst_port=any
+ip=any
+recv="Now I own your computer"

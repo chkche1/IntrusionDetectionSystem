@@ -1,0 +1,60 @@
+host=192.168.0.1
+
+name=Blame Attack 1
+type=protocol
+proto=tcp
+src_port=5551
+dst_port=any
+ip=any
+recv="Now I own your computer"
+
+name=Blame Attack 2
+type=tcp_stream
+src_port=5551
+dst_port=any
+ip=any
+recv="Now I own your computer"
+
+name=Blame Attack 3
+type=tcp_stream
+src_port=5551
+dst_port=any
+ip=any
+recv="\x90{10}.*\xcd\x80"
+
+name=TFTP remote boot
+type=protocol
+proto=udp
+src_port=any
+dst_port=69
+ip=any
+send="vmlinuz"
+recv="\x00\x03\x00\x01"
+
+name=NULL scan
+type=protocol
+proto=tcp
+src_port=80
+dst_port=any
+ip=any
+recv=".*" with flags=
+
+name=Plaintext POP
+type=protocol
+proto=tcp
+src_port=110
+dst_port=any
+ip=any
+send="\+OK.*\r\n"
+recv="USER .*\r\n"
+send="\+OK.*\r\n"
+recv="PASS.*\r\n"
+send="\+OK.*\r\n"
+
+name=XMAS scan
+type=protocol
+proto=tcp
+src_port=any
+dst_port=any
+ip=any
+recv=".*" with flags=FUP

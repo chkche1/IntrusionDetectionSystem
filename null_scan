@@ -1,0 +1,9 @@
+host=192.168.0.1
+
+name=NULL scan
+type=protocol
+proto=tcp
+src_port=80
+dst_port=any
+ip=any
+recv=".*" with flags=

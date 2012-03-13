@@ -1,0 +1,10 @@
+host=192.168.0.1
+
+name=TFTP remote boot
+type=protocol
+proto=udp
+src_port=any
+dst_port=69
+ip=any
+send="vmlinuz"
+recv="\x00\x03\x00\x01"

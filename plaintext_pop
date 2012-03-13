@@ -1,0 +1,13 @@
+host=192.168.0.1
+
+name=Plaintext POP
+type=protocol
+proto=tcp
+src_port=110
+dst_port=any
+ip=any
+send="\+OK.*\r\n"
+recv="USER .*\r\n"
+send="\+OK.*\r\n"
+recv="PASS.*\r\n"
+send="\+OK.*\r\n"
